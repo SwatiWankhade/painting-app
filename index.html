@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Paintings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>Paint Me <img src="/logo.jpeg" alt="">`</h1> -->
+   <div class="field">
+    <canvas id="canvas"></canvas>
+    <div class="tools">
+        <button onclick="download_img()" type="button" id="download">Download</button>
+        <button onclick="undo_last()" type="button" class="button">Undo</button>
+        <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+
+        <div onclick="change_color(this)" class="color-field" style="background : red;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background : rgb(18, 132, 232);"></div>
+        <div onclick="change_color(this)" class="color-field" style="background : rgb(4, 199, 40);"></div>
+        <div onclick="change_color(this)" class="color-field" style="background : rgb(5, 0, 0);"></div>
+
+        <input oninput="draw_color = this.value" type="color" class="color-picker">
+        <input oninput="draw_width = this.value" type="range" min="1" max="100" class="pen-range">
+    </div>
+   </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
